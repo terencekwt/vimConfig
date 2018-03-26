@@ -1,8 +1,9 @@
 " General {
-	"set background=dark         " Assume a dark background
+    colorscheme desert
+	set background=dark         " Assume a dark background
 	filetype plugin indent on  	" Automatically detect file types.
 	syntax on 					" syntax highlighting
-	set mouse=a					" automatically enable mouse usage
+    set mouse=a					" automatically enable mouse usage
 	"scriptencoding utf-8
 
 	"set autowrite                  " automatically write a file when leaving a modified buffer
@@ -43,7 +44,7 @@
 		set statusline+=%w%h%m%r " Options
         "set statusline+=%{fugitive#statusline()} "  Git Hotness
 		set statusline+=\ [%{&ff}/%Y]            " filetype
-		set statusline+=\ [%{getcwd()}]          " current dir
+		"set statusline+=\ [%{getcwd()}]          " current dir
 		"set statusline+=\ [A=\%03.3b/H=\%02.2B] " ASCII / Hexadecimal value of char
 		set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
 	endif
@@ -69,7 +70,7 @@
 " }
 
 " Formatting {
-	set nowrap                     	" wrap long lines
+	"set nowrap                     	" wrap long lines
 	set autoindent                 	" indent at the same level of the previous line
 	set shiftwidth=4               	" use indents of 4 spaces
 	set expandtab 	  	     		" tabs are spaces, not tabs
@@ -82,3 +83,6 @@
 	"autocmd FileType c,cpp,java,php,js,python,twig,xml,yml autocmd BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")'))
 " }
 
+" Editing {
+    set clipboard=unnamedplus
+" }
